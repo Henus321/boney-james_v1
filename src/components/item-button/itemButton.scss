@@ -1,0 +1,13 @@
+.button-item {
+  margin-top: auto;
+  align-self: flex-start;
+  color: #111;
+  background-color: white;
+  border: 1px solid #555;
+  padding: 2rem 4rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: whitesmoke;
+  }
+}

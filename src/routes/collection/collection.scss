@@ -1,0 +1,6 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.collection {
+  @include collection-grid();
+}

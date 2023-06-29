@@ -1,0 +1,29 @@
+@import '../../sass/variables.styles.scss';
+@import '../../sass/mixins.styles.scss';
+
+.button {
+  &--wide-black {
+    padding: 2rem;
+    background-color: #555;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+  }
+
+  &--close {
+    padding: 2rem 3rem;
+    font-size: $medium-font-size;
+    border: none;
+    color: #111;
+    background-color: transparent;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.user-details {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content min-content;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin: 2rem auto 0;
+    font-size: 2rem;
+  }
+}

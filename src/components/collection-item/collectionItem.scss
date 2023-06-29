@@ -1,0 +1,119 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.collection-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr repeat(3, max-content);
+
+  &:link,
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  &__image-container {
+    position: relative;
+    display: block;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__hover-container {
+    position: absolute;
+    display: grid;
+    grid-column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    transform: translateY(101%);
+    transition: all 0.3s ease;
+
+    @media only screen and (max-width: $bp-medium) {
+      transform: translateY(0);
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+
+    &:hover {
+      transform: translateY(0);
+    }
+  }
+
+  &__image:hover ~ &__hover-container {
+    transform: translateY(0);
+  }
+
+  &__hover-title {
+    grid-column: 1 / 5;
+    font-size: $default-font-size;
+    justify-self: center;
+    font-weight: normal;
+    color: #777;
+  }
+
+  &__hover-size {
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: $medium-font-size;
+    cursor: pointer;
+  }
+
+  &__name {
+    grid-column: 1 / 3;
+    white-space: nowrap;
+  }
+
+  &__cost,
+  &__article {
+    color: #777;
+    white-space: nowrap;
+  }
+
+  &__cost {
+    justify-self: end;
+  }
+
+  &__color-circles {
+    grid-column: 1 / 2;
+    align-self: center;
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  &__color {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+
+    @include colors();
+  }
+
+  &__icon {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: end;
+    align-self: end;
+    font-size: $big-font-size;
+    @include togglingHeart();
+  }
+}

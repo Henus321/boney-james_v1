@@ -1,0 +1,51 @@
+@import '../../../sass/mixins.styles.scss';
+@import '../../../sass/variables.styles.scss';
+
+.header-icons-menu {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  height: 100%;
+  align-content: center;
+  justify-self: end;
+  grid-column-gap: 4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column-gap: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column-gap: 2rem;
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__icon {
+    font-size: $icon-font-size;
+    cursor: pointer;
+  }
+
+  &__icon-heart {
+    font-size: 2.7rem;
+    transform: translate(2px, 3px);
+  }
+
+  &__heart-span,
+  &__bag-span,
+  &__user-span {
+    &--active {
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+      transform: translate(-50%, -50%);
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: $red-color;
+    }
+  }
+}

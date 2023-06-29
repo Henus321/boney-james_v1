@@ -1,0 +1,41 @@
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: backgroundBlurDisappear 0.5s ease;
+  visibility: hidden;
+  z-index: 105;
+
+  &--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: backgroundBlurAppear 0.5s ease;
+    z-index: 105;
+  }
+}
+
+@keyframes backgroundBlurAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backgroundBlurDisappear {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.bookmarks {
+  width: 100%;
+
+  @include collection-grid();
+
+  &__no-items {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 90%;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include plug();
+  }
+}

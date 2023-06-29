@@ -1,0 +1,78 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content min-content min-content;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  justify-items: center;
+  padding: 5rem 3rem;
+  text-align: center;
+  background-color: #f7f7f7;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
+
+  &__information {
+    display: block;
+    height: 100%;
+  }
+
+  &__title-contacts,
+  &__title {
+    font-size: $big-font-size;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__title {
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__social {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    grid-column-gap: 2rem;
+    justify-content: center;
+  }
+
+  &__social-item {
+    font-size: 4rem;
+    color: #111;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 60%;
+    }
+  }
+
+  &__social-link {
+    color: #111;
+  }
+}

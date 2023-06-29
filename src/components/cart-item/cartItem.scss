@@ -1,0 +1,92 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2rem 1rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  &__photo {
+    height: auto;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    grid-row: 1 / -1;
+  }
+
+  &__description {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2.8rem;
+  }
+
+  &__item-name {
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+
+  &__color {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+
+    &-container {
+      display: flex;
+      align-items: center;
+    }
+    @include colors();
+  }
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    color: #111;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  &__delete-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    color: #111;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: $large-font-size;
+    color: #333;
+    cursor: pointer;
+
+    &--active {
+      color: $red-color;
+    }
+  }
+}

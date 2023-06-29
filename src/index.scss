@@ -1,0 +1,42 @@
+@import './sass/mixins.styles.scss';
+@import './sass/variables.styles.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $default-font-size;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: min-content minmax(65vh, 1fr) min-content;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: min-content 1fr min-content;
+    min-height: 100vh;
+  }
+}

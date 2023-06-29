@@ -1,0 +1,6 @@
+@import '../../sass/mixins.styles.scss';
+@import '../../sass/variables.styles.scss';
+
+.sign-up {
+  @include sign();
+}
