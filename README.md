@@ -14,5 +14,3 @@ E-commerce website. You can browse coat collections, add items to the cart and d
   - Firestore Database
   - Storage
 - SCSS
-
-This project deployed on netlify: [hen-boneyjames.netlify.app/](https://hen-boneyjames.netlify.app/)
